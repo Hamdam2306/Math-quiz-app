@@ -19,11 +19,11 @@ function generateOperation() {
   const ops = [
     { symbol: "+", method: (a: number, b: number) => a + b },
     { symbol: "-", method: (a: number, b: number) => a - b },
-    { symbol: "×", method: (a: number, b: number) => a * b },
+    { symbol: "*", method: (a: number, b: number) => a * b },
   ];
 
-  const a = Math.floor(Math.random() * 10) + 1;
-  const b = Math.floor(Math.random() * 10) + 1;
+  const a = Math.floor(Math.random() * 10000) + 100;
+  const b = Math.floor(Math.random() * 10000) + 100;
   const opIndex = Math.floor(Math.random() * ops.length);
   const op = ops[opIndex];
   const answer = op.method(a, b);
