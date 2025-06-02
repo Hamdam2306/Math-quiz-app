@@ -22,8 +22,8 @@ function generateOperation() {
     { symbol: "*", method: (a: number, b: number) => a * b },
   ];
 
-  const a = Math.floor(Math.random() * 10000) + 100;
-  const b = Math.floor(Math.random() * 10000) + 100;
+  const a = Math.floor(Math.random() * 50) + 10;
+  const b = Math.floor(Math.random() * 10) + 10;
   const opIndex = Math.floor(Math.random() * ops.length);
   const op = ops[opIndex];
   const answer = op.method(a, b);
@@ -51,7 +51,7 @@ function generateOperation() {
 
 export function MathQuiz() {
   const totalQuestions = 10;
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [timeLeft, setTimeLeft] = useState(15);
   const [isTimeUp, setIsTimeUp] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [score, setScore] = useState(0);
